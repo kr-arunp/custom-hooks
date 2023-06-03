@@ -1,8 +1,8 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import DetectsDevice from './Components/DetectsDevice'
-import useDataFetching from "./Components/WithCustomHooks/useDataFetching";
 import FetchData from './Components/FetchData';
+import LocalStorage from './Components/LocalStorage';
 function App() {
 	return (
 		<div className="min-h-screen w-[100vw] bg-[#393E46]">
@@ -16,6 +16,7 @@ function App() {
 					/>
 					<Route path="/useMediaQuery" element={<DetectsDevice />} />
 					<Route path="/useFetch" element={<FetchData />} />
+					<Route path="/useLocalStorage" element={<LocalStorage />} />
 					<Route path="*" element={<p>Not Found</p>} />
 				</Routes>
 			</BrowserRouter>

@@ -1,18 +1,19 @@
 import { useState } from "react";
 import useDataFetching from "./hooks/useDataFetching";
 const url = `https://api.github.com/users/`;
-const FetchData = () => {
-	const [input, setInput] = useState("");
-	console.log("🚀 ~ file: FetchData.jsx:6 ~ FetchData ~ input:", input)
-	const { data, loading, error } = useDataFetching(url);
-	{
-		loading && <h1>Loading...</h1>;
+import React, { useState } from 'react'
+import useDataFetching from "./WithCustomHooks/useDataFetching";
+// const url = `https://api.github.com/users/${input}`;
+const FetchData=() => {
+	const [input, setInput]=useState("");
+  const { data, loading, error }=useDataFetching( url);
+  {
+	  loading && <h1>Loading...</h1>;
 	}
 	{
 		error && <h1>Error Occurred...</h1>;
 	}
-	console.log("🚀 ~ file: FetchData.jsx:8 ~ FetchData ~ data:", data);
-	return (
+  return (
 		<div>
 			<h1>useDataFetching demo</h1>
 			<div className="fixed top-0 left-0 right-0 p-4 text-center bg-green-200 rounded-lg shadow-lg">

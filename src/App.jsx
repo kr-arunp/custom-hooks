@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import DetectsDevice from './Components/DetectsDevice'
 import FetchData from './Components/FetchData';
 import LocalStorage from './Components/LocalStorage';
+import CurrentWindowSize from './Components/CurrentWindowSize';
 function App() {
 	return (
 		<div className="min-h-screen w-[100vw] bg-[#393E46]">
@@ -17,6 +18,7 @@ function App() {
 					<Route path="/useMediaQuery" element={<DetectsDevice />} />
 					<Route path="/useFetch" element={<FetchData />} />
 					<Route path="/useLocalStorage" element={<LocalStorage />} />
+					<Route path="/windowsize" element={<CurrentWindowSize />} />
 					<Route path="*" element={<p>Not Found</p>} />
 				</Routes>
 			</BrowserRouter>

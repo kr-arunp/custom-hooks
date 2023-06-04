@@ -1,9 +1,6 @@
 import { useState } from "react";
 import useDataFetching from "./hooks/useDataFetching";
 const url = `https://api.github.com/users/`;
-import React, { useState } from 'react'
-import useDataFetching from "./WithCustomHooks/useDataFetching";
-// const url = `https://api.github.com/users/${input}`;
 const FetchData=() => {
 	const [input, setInput]=useState("");
   const { data, loading, error }=useDataFetching( url);

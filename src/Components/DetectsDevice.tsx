@@ -3,7 +3,7 @@ import { BsPhone } from "react-icons/bs";
 import { BsLaptop } from "react-icons/bs";
 import { RiTabletLine } from "react-icons/ri";
 import { GoDeviceDesktop } from "react-icons/go";
-import useMediaQuery from "./WithCustomHooks/useMediaQuery";
+import useMediaQuery from "./hooks/useMediaQuery";
 
 const DetectsDevice = () => {
 	const deviceType = useMediaQuery();

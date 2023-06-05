@@ -8,7 +8,7 @@ export function useOnlineStatus(userId) {
 		async function checkStatus() {
 			try {
 				const response = await fetch(
-					`https://mychat.me/users/${userId}/status`
+					p`https://mychat.me/users/${userId}/status`
 				);
 				const status = await response.json();
 				if (isMounted) {

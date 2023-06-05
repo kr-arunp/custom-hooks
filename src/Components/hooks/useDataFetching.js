@@ -15,7 +15,7 @@ const useDataFetching = (url) => {
 				setError(error);
 			} finally {
 				setLoading(false);
-			}
+			}p
 		};
 		fetchData();
 	}, [url]);

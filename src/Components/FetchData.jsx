@@ -1,11 +1,12 @@
 import { useState } from "react";
 import useDataFetching from "./hooks/useDataFetching";
 
+
 const url = "https://api.github.com/users/";
 
 const FetchData = () => {
 	const [input, setInput] = useState("");
-	const { data, loading, error } = useDataFetching(`${url}${input}`); // Append the input value to the API URL to fetch data for a specific user
+	const { data, loading, error } = useDataFetching(`${url}${input}`); 
 
 	if (loading) {
 		return <h1>Loading...</h1>; 

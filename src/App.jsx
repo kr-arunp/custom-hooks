@@ -4,6 +4,9 @@ import DetectsDevice from './Components/DetectsDevice'
 import FetchData from './Components/FetchData';
 import LocalStorage from './Components/LocalStorage';
 import CurrentWindowSize from './Components/CurrentWindowSize';
+import Counter from './Components/Counter';
+import TurnOnFullScreen from './Components/TurnOnFullScreen';
+import { Search } from './Components/Search';
 function App() {
 	return (
 		<div className="min-h-screen w-[100vw] bg-[#393E46]">
@@ -18,7 +21,10 @@ function App() {
 					<Route path="/useMediaQuery" element={<DetectsDevice />} />
 					<Route path="/useFetch" element={<FetchData />} />
 					<Route path="/useLocalStorage" element={<LocalStorage />} />
-					<Route path="/windowsize" element={<CurrentWindowSize />} />
+					<Route path="/useWindowsize" element={<CurrentWindowSize />} />
+					<Route path="/counter" element={<Counter />} />
+					<Route path="/fullscreen" element={<TurnOnFullScreen />} />
+					<Route path="/debounce" element={<Search />} />
 					<Route path="*" element={<p>Not Found</p>} />
 				</Routes>
 			</BrowserRouter>

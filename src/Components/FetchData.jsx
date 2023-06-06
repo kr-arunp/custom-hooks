@@ -28,7 +28,7 @@ const FetchData = () => {
 				/>{" "}
 				<button onClick={() => setInput("")}>Clear</button>{" "}
 				<button>Get Data</button>
-				{data && ( 
+				{data && (
 					<div key={data.id}>
 						<p>Name:{data.name}</p>
 						<p>Bio:{data.bio}</p>

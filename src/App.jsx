@@ -9,6 +9,13 @@ import TurnOnFullScreen from './Components/TurnOnFullScreen';
 import { Search } from './Components/Search';
 import RefExample from './Components/RefExample';
 import ScrollIndicator from './Components/ScrollPosition';
+import LocalStorage from "./Components/LocalStorage";
+import CurrentWindowSize from "./Components/CurrentWindowSize";
+import Counter from "./Components/Counter";
+import TurnOnFullScreen from "./Components/TurnOnFullScreen";
+import { Search } from "./Components/Search";
+import UserProfile from "./Components/UserProfile";
+import GroupChat from './Components/GroupChat';
 function App() {
 	return (
 		<div className="min-h-screen w-[100vw] bg-[#393E46]">
@@ -29,6 +36,11 @@ function App() {
 					<Route path="/debounce" element={<Search />} />
 					<Route path="/ref" element={<RefExample />} />
 					<Route path="/useScroll" element={<ScrollIndicator />} />
+					<Route path="/useFullscreen" element={<TurnOnFullScreen />} />
+					<Route path="/useDebounce" element={<Search />} />
+					<Route path="/useOnline" element={<UserProfile />} />
+					<Route path="/userStatus" element={<GroupChat />} />
+					<Route path="/useCounter" element={<Counter />} />
 					<Route path="*" element={<p>Not Found</p>} />
 				</Routes>
 			</BrowserRouter>

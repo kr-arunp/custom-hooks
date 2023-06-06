@@ -7,6 +7,7 @@ import CurrentWindowSize from './Components/CurrentWindowSize';
 import Counter from './Components/Counter';
 import TurnOnFullScreen from './Components/TurnOnFullScreen';
 import { Search } from './Components/Search';
+import RefExample from './Components/RefExample';
 function App() {
 	return (
 		<div className="min-h-screen w-[100vw] bg-[#393E46]">
@@ -25,6 +26,7 @@ function App() {
 					<Route path="/counter" element={<Counter />} />
 					<Route path="/fullscreen" element={<TurnOnFullScreen />} />
 					<Route path="/debounce" element={<Search />} />
+					<Route path="/ref" element={<RefExample />} />
 					<Route path="*" element={<p>Not Found</p>} />
 				</Routes>
 			</BrowserRouter>

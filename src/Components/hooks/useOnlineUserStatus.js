@@ -8,7 +8,7 @@ export function useOnlineStatus(userId) {
 		async function checkStatus() {
 			try {
 				const response = await fetch(
-					p`https://mychat.me/users/${userId}/status`
+					`https://mychat.me/users/${userId}/status`
 				);
 				const status = await response.json();
 				if (isMounted) {
@@ -18,10 +18,8 @@ export function useOnlineStatus(userId) {
 				console.error(error);
 			}
 		}
-
 		checkStatus();
-
-		return () => {
+     return () => {
 			isMounted = false;
 		};
 	}, [userId]);

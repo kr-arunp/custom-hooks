@@ -9,16 +9,14 @@ const useScrollPosition = () => {
 			const currentPosition =window.scrollY || document.documentElement.scrollTop;
 			setScrollPosition(currentPosition);
 		};
-
 		document.addEventListener("scroll", handleScrollPosition);
-
-		return () => document.removeEventListener("scroll", handleScrollPosition);
+    	return () => document.removeEventListener("scroll", handleScrollPosition);
 	}, []);
 
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
 			lastScrollPositionRef.current = scrollPosition;
-		}, 400);
+		}, 1000);
 
 		return () => clearTimeout(timeoutId);
 	}, [scrollPosition]);

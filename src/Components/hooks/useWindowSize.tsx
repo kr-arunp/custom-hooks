@@ -17,7 +17,7 @@ export const useWindowSize = () => {
 		handleWindowResize();
 		window.addEventListener("resize",handleWindowResize);
 		//below cleanup fun runs whenever useEffect dep changes ,here is not dep ,
-		//so only runs first time when comp gets 
+		//so only runs first time when comp gets mounts
 		return () => window.removeEventListener("resize", handleWindowResize);
 	}, []);
 

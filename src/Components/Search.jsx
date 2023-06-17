@@ -6,21 +6,23 @@ export function Search() {
 	const [searchTerm, setSearchTerm] = useState("");
 	const [filteredData, setFilteredData]=useState([data]);
 	const debouncedSearchTerm = useDebounce(searchTerm, 1000);
-
 	const handleChange = (event) => {
 		setSearchTerm(event.target.value);
 	};
 	useEffect(()=>{
-	setFilteredData(data.filter((user) => {
-		const values = Object.values(user).map((value) =>
-			typeof value === "string" ? value.toLowerCase() : value
-		);
-		return values.some((value) =>
-			typeof value === "string"
-				? value.includes(debouncedSearchTerm.toLowerCase())
-				: false
-		);
-	}))
+		const getData=() => {
+			setFilteredData(data.filter((user) => {
+				const values=Object.values(user).map((value) =>
+					typeof value==="string"? value.toLowerCase():value
+				);
+				return values.some((value) =>
+					typeof value==="string"
+						? value.includes(debouncedSearchTerm.toLowerCase())
+						:false
+				);
+			}))
+		}
+		getData() 
 	},[debouncedSearchTerm])
 
 

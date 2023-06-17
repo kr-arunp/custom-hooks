@@ -7,6 +7,7 @@ import useMediaQuery from "./hooks/useMediaQuery";
 
 const DetectsDevice = () => {
 	const deviceType = useMediaQuery();
+	console.log(deviceType)
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen text-[#222831] w-[100%]">
 			<div className="fixed top-0 left-0 right-0 p-4 text-center bg-green-200 rounded-lg shadow-lg">
